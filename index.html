@@ -1,267 +1,66 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Royal Cafe & Bistro — Official Website</title>
-  <meta name="description" content="Royal Cafe & Bistro — Fresh, tasty food with fast service. Order on WhatsApp, Zomato, or Swiggy." />
-  <meta property="og:title" content="Royal Cafe & Bistro" />
-  <meta property="og:description" content="Order your favorite dishes on WhatsApp, Zomato, or Swiggy." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="logo.png" />
-  <link rel="icon" href="favicon.png" />
-  <style>
-    /* ========== RESET & BASE ========== */
-    *, *::before, *::after{ box-sizing:border-box }
-    :root{ --brand:#ff6a2b; --ink:#111; --muted:#666; --line:#eee; --bg:#fafafa; --card:#fff; }
-    body{ margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,'Noto Sans Bengali',Arial,Helvetica,sans-serif; color:var(--ink); background:var(--bg); line-height:1.45 }
-    a{ color:inherit; text-decoration:none }
-    img{ max-width:100%; display:block }
-    .container{ max-width:1100px; margin:0 auto; padding:0 16px }
-
-    /* ========== HEADER ========== */
-    header{ position:sticky; top:0; z-index:50; background:#fff; border-bottom:1px solid var(--line) }
-    .topbar{ display:flex; align-items:center; justify-content:space-between; gap:12px; padding:10px 0 }
-    .brand{ display:flex; align-items:center; gap:10px }
-    .brand img{ width:56px; height:56px; object-fit:contain; border-radius:10px }
-    .brand h1{ font-size:20px; margin:0; letter-spacing:.2px }
-    nav{ display:flex; gap:10px; flex-wrap:wrap }
-    nav a{ padding:8px 10px; border-radius:8px }
-    nav a:hover{ background:#f6f6f6 }
-
-    /* ========== HERO ========== */
-    .hero{ display:grid; grid-template-columns:1fr; gap:18px; padding:20px 0 }
-    .hero-card{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px; box-shadow:0 10px 24px rgba(0,0,0,.04) }
-    .hero h2{ font-size:30px; margin:0 }
-    .lead{ color:var(--muted) }
-    .cta-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:12px }
-    .btn{ display:inline-block; padding:10px 14px; border-radius:10px; font-weight:700; border:1px solid transparent }
-    .btn.brand{ background:var(--brand); color:#fff }
-    .btn.light{ background:#fff; border-color:var(--line) }
-    .status{ display:inline-flex; align-items:center; gap:8px; font-size:13px; color:var(--muted) }
-    .dot{ width:8px; height:8px; border-radius:50%; background:#aaa }
-
-    /* Simple slider */
-    .slider{ position:relative; overflow:hidden; border-radius:14px; border:1px solid var(--line) }
-    .slides{ display:flex; transition:transform .6s ease }
-    .slide{ min-width:100%; height:260px; object-fit:cover }
-    .dots{ position:absolute; bottom:8px; left:50%; transform:translateX(-50%); display:flex; gap:6px }
-    .dotbtn{ width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,.7); border:1px solid rgba(0,0,0,.15) }
-    .dotbtn.active{ background:var(--brand) }
-
-    /* ========== MENU ========== */
-    section h3{ margin:0 0 8px 0; font-size:22px }
-    .menu-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px }
-    .card{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:10px }
-    .menu-item{ display:flex; gap:10px }
-    .menu-item img{ width:96px; height:78px; object-fit:cover; border-radius:8px }
-    .price{ font-weight:800 }
-
-    /* ========== GALLERY ========== */
-    .gallery{ display:grid; grid-template-columns:repeat(2,1fr); gap:10px }
-    .gallery img{ height:160px; object-fit:cover; border-radius:10px; border:1px solid var(--line) }
-
-    /* ========== CONTACT ========== */
-    .contact{ display:grid; grid-template-columns:1fr; gap:12px }
-    footer{ margin-top:16px; border-top:1px solid var(--line); }
-    .foot{ padding:14px 0; color:var(--muted); font-size:13px; display:flex; gap:8px; align-items:center; justify-content:space-between; flex-wrap:wrap }
-
-    /* Floating WhatsApp button */
-    .wa-float{ position:fixed; right:16px; bottom:16px; z-index:1000 }
-    .wa-float a{ display:block; padding:12px 16px; border-radius:50px; background:#25D366; color:#fff; font-weight:800; box-shadow:0 8px 22px rgba(0,0,0,.18) }
-
-    /* Responsive */
-    @media(min-width:780px){
-      .hero{ grid-template-columns:1.1fr .9fr }
-      .slide{ height:360px }
-      .menu-grid{ grid-template-columns:repeat(3,1fr) }
-      .gallery{ grid-template-columns:repeat(4,1fr) }
-      .contact{ grid-template-columns:1.1fr .9fr }
-      .brand h1{ font-size:22px }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Cafe & Bistro</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Royal Cafe & Bistro Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- ===== HEADER ===== -->
-  <header>
-    <div class="container topbar">
-      <div class="brand">
-        <!-- Replace logo.png with your uploaded file name -->
-        <img src="logo.png" alt="Royal Cafe & Bistro logo" />
-        <div>
-          <h1>Royal Cafe & Bistro</h1>
-          <div class="status"><span id="openDot" class="dot"></span><span id="openText">Opening hours: 10:00 – 22:00</span></div>
-        </div>
-      </div>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#order">Order</a>
-        <a href="#menu">Menu</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container" id="home">
-    <!-- ===== HERO ===== -->
-    <section class="hero">
-      <div class="hero-card">
-        <h2>স্বাগতম — Royal Cafe & Bistro</h2>
-        <p class="lead">তাজা, সুস্বাদু খাবার ও দ্রুত সার্ভিস। এখনই অর্ডার করুন WhatsApp, Zomato বা Swiggy-তে।</p>
-        <div class="cta-row">
-          <!-- WhatsApp direct order -->
-          <a class="btn brand" href="https://wa.me/918721004454?text=%E0%A6%B9%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%8B!%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20Royal%20Cafe%20%26%20Bistro%20%E0%A6%A5%E0%A7%87%E0%A6%95%E0%A7%87%20%E0%A6%85%E0%A6%B0%E0%A7%8D%E0%A6%A1%E0%A6%BE%E0%A6%B0%20%E0%A6%95%E0%A6%B0%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank" rel="noopener">Order on WhatsApp</a>
-          <!-- Replace the placeholders below with your real restaurant links on Zomato and Swiggy -->
-          <a class="btn light" id="zomatoBtn" href="#" target="_blank" rel="noopener">Order on Zomato</a>
-          <a class="btn light" id="swiggyBtn" href="#" target="_blank" rel="noopener">Order on Swiggy</a>
-          <a class="btn light" href="tel:+918721004454">Call: +91 87210 04454</a>
-        </div>
-      </div>
-
-      <!-- Slider (replace images) -->
-      <div class="slider hero-card" aria-label="Food gallery slider">
-        <div class="slides" id="slides">
-          <img class="slide" src="hero1.jpg" alt="Signature dish (replace)">
-          <img class="slide" src="hero2.jpg" alt="Fresh bakery (replace)">
-          <img class="slide" src="hero3.jpg" alt="Beverages (replace)">
-        </div>
-        <div class="dots" id="dots" aria-hidden="true">
-          <button class="dotbtn" data-i="0" aria-label="Slide 1"></button>
-          <button class="dotbtn" data-i="1" aria-label="Slide 2"></button>
-          <button class="dotbtn" data-i="2" aria-label="Slide 3"></button>
-        </div>
-      </div>
+    <section id="home" class="hero">
+        <h1>Welcome to Royal Cafe & Bistro</h1>
+        <p>Delicious food, cozy ambiance, and great service – all in one place.</p>
+        <a href="#menu" class="btn">View Our Menu</a>
     </section>
 
-    <!-- ===== ABOUT ===== -->
-    <section id="about" style="padding:6px 0 16px">
-      <h3>About Us</h3>
-      <p class="lead">Royal Cafe & Bistro-তে আমরা গুণগত মানের উপরে কোনো আপস করি না। ফ্রেশ উপকরণ, পরিচ্ছন্ন কিচেন এবং পরিবার-সুলভ সার্ভিস আমাদের প্রতিশ্রুতি।</p>
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <p>Explore our wide variety of dishes made with love and fresh ingredients.</p>
+        <ul>
+            <li>Burger - $5.99</li>
+            <li>Pizza - $8.99</li>
+            <li>Pasta - $6.99</li>
+            <li>Coffee - $2.99</li>
+        </ul>
     </section>
 
-    <!-- ===== QUICK ORDER ===== -->
-    <section id="order" class="card" style="padding:14px; margin-bottom:12px">
-      <h3>Quick Order</h3>
-      <p class="lead">এক ক্লিকে অর্ডার করুন — নিচের যে কোনো প্ল্যাটফর্ম বেছে নিন।</p>
-      <div class="cta-row">
-        <a class="btn brand" href="https://wa.me/918721004454?text=%E0%A6%B9%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%8B!%20Royal%20Cafe%20%26%20Bistro%20%E0%A6%A5%E0%A7%87%E0%A6%95%E0%A7%87%20%E0%A6%85%E0%A6%B0%E0%A7%8D%E0%A6%A1%E0%A6%BE%E0%A6%B0%20%E0%A6%95%E0%A6%B0%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="btn light" id="zomatoBtn2" href="#" target="_blank" rel="noopener">Zomato</a>
-        <a class="btn light" id="swiggyBtn2" href="#" target="_blank" rel="noopener">Swiggy</a>
-      </div>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>At Royal Cafe & Bistro, we believe in serving quality food and creating memorable dining experiences. Our chefs prepare each dish with care to ensure every bite is delicious.</p>
     </section>
 
-    <!-- ===== MENU ===== -->
-    <section id="menu" style="padding:6px 0 18px">
-      <h3>Our Menu (Sample)</h3>
-      <div class="menu-grid" aria-live="polite">
-        <!-- Duplicate blocks below for real items. Replace image, name and price. -->
-        <div class="card menu-item">
-          <img src="dish1.jpg" alt="Dish 1 (replace)">
-          <div>
-            <div style="font-weight:800">চিকেন বিরিয়ানি</div>
-            <div class="lead">সুগন্ধি বাসমতি রাইস ও স্পেশাল মসলা</div>
-            <div class="price" style="margin-top:6px">₹180</div>
-            <a class="btn brand" style="margin-top:6px" href="https://wa.me/918721004454?text=%E0%A6%86%E0%A6%AE%E0%A6%BF%20%E0%A6%85%E0%A6%B0%E0%A7%8D%E0%A6%A1%E0%A6%BE%E0%A6%B0%20%E0%A6%95%E0%A6%B0%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87:%20%E0%A6%9A%E0%A6%BF%E0%A6%95%E0%A7%87%E0%A6%A8%20%E0%A6%AC%E0%A6%BF%E0%A6%B0%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%A8%E0%A6%BF%20-%20%E0%A7%A7%E0%A6%9F%E0%A6%BF">WhatsApp Order</a>
-          </div>
-        </div>
-
-        <div class="card menu-item">
-          <img src="dish2.jpg" alt="Dish 2 (replace)">
-          <div>
-            <div style="font-weight:800">মাটন কাবাব</div>
-            <div class="lead">চারকোল গ্রিলড, জুসি & টেন্ডার</div>
-            <div class="price" style="margin-top:6px">₹220</div>
-            <a class="btn brand" style="margin-top:6px" href="https://wa.me/918721004454?text=%E0%A6%86%E0%A6%AE%E0%A6%BF%20%E0%A6%85%E0%A6%B0%E0%A7%8D%E0%A6%A1%E0%A6%BE%E0%A6%B0%20%E0%A6%95%E0%A6%B0%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87:%20%E0%A6%AE%E0%A6%BE%E0%A6%9F%E0%A6%A8%20%E0%A6%95%E0%A6%BE%E0%A6%AC%E0%A6%BE%E0%A6%AC%20-%20%E0%A7%A7%E0%A6%9F%E0%A6%BF">WhatsApp Order</a>
-          </div>
-        </div>
-
-        <div class="card menu-item">
-          <img src="dish3.jpg" alt="Dish 3 (replace)">
-          <div>
-            <div style="font-weight:800">ভেজ পাস্তা</div>
-            <div class="lead">ক্রিমি সস ও তাজা সবজি</div>
-            <div class="price" style="margin-top:6px">₹150</div>
-            <a class="btn brand" style="margin-top:6px" href="https://wa.me/918721004454?text=%E0%A6%86%E0%A6%AE%E0%A6%BF%20%E0%A6%85%E0%A6%B0%E0%A7%8D%E0%A6%A1%E0%A6%BE%E0%A6%B0%20%E0%A6%95%E0%A6%B0%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87:%20%E0%A6%AD%E0%A7%87%E0%A6%9C%20%E0%A6%AA%E0%A6%BE%E0%A6%B8%E0%A7%8D%E0%A6%A4%E0%A6%BE%20-%20%E0%A7%A7%E0%A6%9F%E0%A6%BF">WhatsApp Order</a>
-          </div>
-        </div>
-      </div>
-      <p class="lead" style="margin-top:10px">আপনার সম্পূর্ণ মেনু দিতে চাইলে এই ব্লকগুলো কপি করে নাম/দাম/ছবি বদলে দিন।</p>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Address: Your Cafe Address Here</p>
+        <p>Phone: +91 87210 04454</p>
+        <p>Email: info@royalcafebistro.com</p>
+        <p>
+            <a href="https://wa.me/918721004454" target="_blank" class="btn">Order on WhatsApp</a>
+            <a href="https://www.zomato.com/" target="_blank" class="btn">Order on Zomato</a>
+            <a href="https://www.swiggy.com/" target="_blank" class="btn">Order on Swiggy</a>
+        </p>
     </section>
 
-    <!-- ===== GALLERY ===== -->
-    <section style="padding-bottom:18px">
-      <h3>Gallery</h3>
-      <div class="gallery">
-        <img src="gal1.jpg" alt="Restaurant view (replace)">
-        <img src="gal2.jpg" alt="Food closeup (replace)">
-        <img src="gal3.jpg" alt="Chef special (replace)">
-        <img src="gal4.jpg" alt="Dessert (replace)">
-      </div>
-    </section>
+    <footer>
+        <p>&copy; 2025 Royal Cafe & Bistro. All rights reserved.</p>
+    </footer>
 
-    <!-- ===== CONTACT ===== -->
-    <section id="contact" class="contact" style="padding-bottom:14px">
-      <div class="card" style="padding:14px">
-        <h3>Contact Us</h3>
-        <p class="lead">Phone: <a href="tel:+918721004454"><strong>+91 87210 04454</strong></a></p>
-        <p class="lead">WhatsApp: <a href="https://wa.me/918721004454" target="_blank" rel="noopener"><strong>চ্যাট করুন</strong></a></p>
-        <p class="lead">Email: <strong>info@royalcafebistro.example</strong></p>
-        <p class="lead">Address: <strong>Your full address here</strong></p>
-        <p class="lead">Open: <strong>10:00 – 22:00</strong> (Daily)</p>
-      </div>
-      <div class="card" style="padding:0; overflow:hidden">
-        <!-- Replace the src below with your live Google Maps Embed URL -->
-        <iframe title="Map" src="https://www.google.com/maps/embed?pb=!1m18" style="border:0; width:100%; height:260px" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </section>
-  </main>
-
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <div class="container foot">
-      <div>© <span id="yr"></span> Royal Cafe & Bistro — All rights reserved.</div>
-      <div>FSSAI / GST (যদি থাকে) এখানে যোগ করুন</div>
-    </div>
-  </footer>
-
-  <!-- Floating WhatsApp Button -->
-  <div class="wa-float">
-    <a href="https://wa.me/918721004454?text=%E0%A6%B9%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%8B!%20Royal%20Cafe%20%26%20Bistro%20%E0%A6%8F%20%E0%A6%85%E0%A6%B0%E0%A7%8D%E0%A6%A1%E0%A6%BE%E0%A6%B0%20%E0%A6%95%E0%A6%B0%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87।" target="_blank" rel="noopener">WhatsApp</a>
-  </div>
-
-  <script>
-    // Footer year
-    document.getElementById('yr').textContent = new Date().getFullYear();
-
-    // Simple slider autoplay + dots
-    (function(){
-      const slides = document.getElementById('slides');
-      const dots = [...document.querySelectorAll('.dotbtn')];
-      let i = 0; const total = slides.children.length;
-      const go = (n)=>{ i = (n+total)%total; slides.style.transform = `translateX(${-i*100}%)`; dots.forEach((d,idx)=> d.classList.toggle('active', idx===i)); }
-      let t = setInterval(()=> go(i+1), 3500);
-      dots.forEach(d=> d.addEventListener('click', ()=>{ clearInterval(t); go(+d.dataset.i); t = setInterval(()=> go(i+1), 3500); })); 
-      go(0);
-    })();
-
-    // Open/Closed indicator (10:00–22:00 local time)
-    (function(){
-      const openText = document.getElementById('openText');
-      const openDot = document.getElementById('openDot');
-      const now = new Date();
-      const hrs = now.getHours() + now.getMinutes()/60;
-      const isOpen = (hrs >= 10 && hrs < 22); // adjust if needed
-      openText.textContent = isOpen ? 'We are OPEN now (10:00 – 22:00)' : 'We are CLOSED now (Open 10:00 – 22:00)';
-      openDot.style.background = isOpen ? '#1ec765' : '#ff4d4f';
-    })();
-
-    // TODO: Replace Zomato & Swiggy links below
-    const zomatoURL = '#'; // e.g. https://www.zomato.com/city/royal-cafe-bistro
-    const swiggyURL = '#'; // e.g. https://www.swiggy.com/restaurants/royal-cafe-bistro
-    ['zomatoBtn','zomatoBtn2'].forEach(id=> document.getElementById(id).href = zomatoURL);
-    ['swiggyBtn','swiggyBtn2'].forEach(id=> document.getElementById(id).href = swiggyURL);
-  </script>
+    <a href="https://wa.me/918721004454" class="whatsapp-float" target="_blank">
+        <img src="whatsapp-icon.png" alt="WhatsApp">
+    </a>
 </body>
 </html>
